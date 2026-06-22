@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanessa Huynh</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+
+  <!-- ── Left sidebar ──────────────────────────────────────────────────── -->
+  <div class="left-pane">
+
+    <div class="left-name" data-view="about" onclick="go('about')" style="cursor:pointer">
+      Vanessa Huynh
+    </div>
+    <div class="left-section">
+      <div class="left-location">AI/ML and Product</div>
+      <div class="left-location">Currently based in California</div>
+    </div>
+
+    <div class="left-section">
+      <div class="left-label">Projects</div>
+      <ul class="left-list">
+        <li class="left-item" data-view="resonance" onclick="go('resonance')">
+          <span class="left-item-text">
+            <span class="left-dot">᯽</span>Resonance
+          </span>
+          <span class="left-year">2026</span>
+        </li>
+        <li class="left-item" data-view="ikebana" onclick="go('ikebana')">
+          <span class="left-item-text">
+            <span class="left-dot">᯽</span>花云 Ikebana
+          </span>
+          <span class="left-year">2026</span>
+        </li>
+        <li class="left-item" data-view="scmac" onclick="go('scmac')">
+          <span class="left-item-text">
+            <span class="left-dot">᯽</span>Santa Cruz Mountains Art Center
+          </span>
+          <span class="left-year">2024</span>
+        </li>
+        <li class="left-item" data-view="asl" onclick="go('asl')">
+          <span class="left-item-text">
+            <span class="left-dot">᯽</span>Sign Language Recognition
+          </span>
+          <span class="left-year">2023</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="left-section">
+      <div class="left-label">Experience</div>
+      <ul class="left-list">
+        <li class="exp-item">
+          <span class="exp-item-text">Caltrans</span>
+          <span class="left-year">Feb–May 2026</span>
+        </li>
+        <li class="exp-item">
+          <span class="exp-item-text">Shipt</span>
+          <span class="left-year">Jun–Aug 2025</span>
+        </li>
+        <li class="exp-item">
+          <span class="exp-item-text">Google</span>
+          <span class="left-year">Aug–Dec 2024</span>
+        </li>
+        <li class="exp-item">
+          <span class="exp-item-text">UCSC Blueprint</span>
+          <span class="left-year">2024–2026</span>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /left-pane -->
+
+  <!-- ── Gap column — empty, provides visual breathing room ────────────── -->
+  <div></div>
+
+  <!-- ── Right content area ────────────────────────────────────────────── -->
+  <div class="right-pane">
+
+    <!-- About — static, lives in the shell, shown by default -->
+    <div class="r-view on" id="view-about">
+      <div class="r-label">About</div>
+      <div class="r-text">
+        <p>I'm a recent graduate from <strong>UC Santa Cruz</strong> with a Bachelor of Science in Computer Science. My primary focus was in <strong>AI and machine learning</strong>, with topics of interest in computer vision, NLP, and vision-language models.</p>
+        <p>Throughout college, I've worked at the intersection of AI, product management, and operations. I enjoy working on meaningful problems and collaborating with people across different contexts from ideation to launch.</p>
+        <p>I'm looking to combine my <strong>technical foundation</strong> and <strong>thoughtful product thinking</strong> to build useful and impactful technology.</p>
+        <p>Outside of work, I'm learning to illustrate birds, going to the beach, or hunting for the best bánh mì places.</p>
+      </div>
+      <div class="r-social-row">
+        <a href="https://www.linkedin.com/in/vanessa-huynh26/" target="_blank" class="r-social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14
+                     2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37
+                     4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0
+                     4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/vanessah-26" target="_blank" class="r-social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55
+                     v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7
+                     1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.74.4-1.26.72-1.55
+                     -2.56-.29-5.25-1.28-5.25-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04
+                     0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63
+                     1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.36.78
+                     1.07.78 2.16v3.2c0 .3.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="mailto:vanessahuynhtvh@gmail.com" class="r-social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 6l10 7 10-7"/>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div><!-- /view-about -->
+
+    <!-- -->
+
+  </div><!-- /right-pane -->
+
+</div><!-- /layout -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
