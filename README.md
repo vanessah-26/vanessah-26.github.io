@@ -1,5 +1,3 @@
-# Vanessa — Portfolio
-
 ```
 portfolio/
 ├── index.html          ← shell: nav, About, routing logic
