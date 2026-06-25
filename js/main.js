@@ -8,7 +8,13 @@
 
 const PROJECT_VIEWS = ['resonance', 'ikebana', 'scmac', 'asl'];
 
-async function go(name) {
+async function go(name, pushState = true) {
+  /* ── Update URL hash ── */
+  if (pushState) {
+    const hash = name === 'about' ? '' : '#' + name;
+    history.pushState({ view: name }, '', location.pathname + hash);
+  }
+
   /* ── Deactivate all views ── */
   document.querySelectorAll('.r-view').forEach(v => v.classList.remove('on'));
 
@@ -56,5 +62,15 @@ async function go(name) {
   }
 }
 
-/* ── Default: show About on load ── */
-document.addEventListener('DOMContentLoaded', () => go('about'));
+/* ── Handle browser back/forward ── */
+window.addEventListener('popstate', e => {
+  const name = (e.state && e.state.view) || 'about';
+  go(name, false);
+});
+
+/* ── On load, read hash to determine initial view ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = location.hash.slice(1);
+  const name = PROJECT_VIEWS.includes(hash) ? hash : 'about';
+  go(name, false);
+});
