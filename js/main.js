@@ -68,6 +68,13 @@ window.addEventListener('popstate', e => {
   go(name, false);
 });
 
+/* ── Handle manual hash changes in the URL bar ── */
+window.addEventListener('hashchange', () => {
+  const hash = location.hash.slice(1);
+  const name = PROJECT_VIEWS.includes(hash) ? hash : 'about';
+  go(name, false);
+});
+
 /* ── On load, read hash to determine initial view ── */
 document.addEventListener('DOMContentLoaded', () => {
   const hash = location.hash.slice(1);
